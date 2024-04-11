@@ -1,1 +1,58 @@
-{"meta": {"api_version": "2.0.17747", "code": 200, "issue_date": "20240408"}, "result": {"items": [{"id": "87", "name": "\u041c\u0438\u0430\u0441\u0441 \u0438 \u0417\u043b\u0430\u0442\u043e\u0443\u0441\u0442", "type": "region"}], "total": 1}}
+{
+   "meta": {
+      "api_version": "2.0.17747",
+      "code": 200,
+      "issue_date": "20240411"
+   },
+   "result": {
+      "items": [
+         {
+            "alias": "prirodnye_dostoprimechatelnosti",
+            "caption": "\u041f\u0440\u0438\u0440\u043e\u0434\u043d\u044b\u0435 \u0434\u043e\u0441\u0442\u043e\u043f\u0440\u0438\u043c\u0435\u0447\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438",
+            "geo_count": 28,
+            "id": "112668",
+            "keyword": "\u041f\u0440\u0438\u0440\u043e\u0434\u043d\u044b\u0435 \u0434\u043e\u0441\u0442\u043e\u043f\u0440\u0438\u043c\u0435\u0447\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438",
+            "name": "\u041f\u0440\u0438\u0440\u043e\u0434\u043d\u044b\u0435 \u0434\u043e\u0441\u0442\u043e\u043f\u0440\u0438\u043c\u0435\u0447\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438",
+            "parent_id": "112663",
+            "title": "\u041f\u0440\u0438\u0440\u043e\u0434\u043d\u044b\u0435 \u0434\u043e\u0441\u0442\u043e\u043f\u0440\u0438\u043c\u0435\u0447\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438",
+            "type": "rubric"
+         },
+         {
+            "alias": "fontany",
+            "caption": "\u0424\u043e\u043d\u0442\u0430\u043d\u044b",
+            "geo_count": 38,
+            "id": "112720",
+            "keyword": "\u0424\u043e\u043d\u0442\u0430\u043d\u044b",
+            "name": "\u0424\u043e\u043d\u0442\u0430\u043d\u044b",
+            "parent_id": "112663",
+            "seo_name": "\u0424\u043e\u043d\u0442\u0430\u043d\u044b",
+            "title": "\u0424\u043e\u043d\u0442\u0430\u043d\u044b",
+            "type": "rubric"
+         },
+         {
+            "alias": "smotrovye_ploshhadki",
+            "caption": "\u0421\u043c\u043e\u0442\u0440\u043e\u0432\u044b\u0435 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0438",
+            "geo_count": 29,
+            "id": "111526",
+            "keyword": "\u0421\u043c\u043e\u0442\u0440\u043e\u0432\u044b\u0435 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0438",
+            "name": "\u0421\u043c\u043e\u0442\u0440\u043e\u0432\u044b\u0435 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0438",
+            "parent_id": "2",
+            "title": "\u0421\u043c\u043e\u0442\u0440\u043e\u0432\u044b\u0435 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0438",
+            "type": "rubric"
+         },
+         {
+            "alias": "interesnye_zdaniya",
+            "caption": "\u0418\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u044b\u0435 \u0437\u0434\u0430\u043d\u0438\u044f",
+            "geo_count": 82,
+            "id": "112670",
+            "keyword": "\u0418\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u044b\u0435 \u0437\u0434\u0430\u043d\u0438\u044f",
+            "name": "\u0418\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u044b\u0435 \u0437\u0434\u0430\u043d\u0438\u044f",
+            "parent_id": "112663",
+            "seo_name": "\u0418\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u044b\u0435 \u0437\u0434\u0430\u043d\u0438\u044f",
+            "title": "\u0418\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u044b\u0435 \u0437\u0434\u0430\u043d\u0438\u044f",
+            "type": "rubric"
+         }
+      ],
+      "total": 4
+   }
+}
