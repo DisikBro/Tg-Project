@@ -16,6 +16,11 @@ logger = logging.getLogger(__name__)
 
 def main():
     application = Application.builder().token(BOT_TOKEN).build()
+    application.add_handler(CommandHandler("observation_platforms", observation_platforms))
+    application.add_handler(CommandHandler("fountains", fountains))
+    application.add_handler(CommandHandler("interesting_buildings", interesting_buildings))
+    application.add_handler(CommandHandler("natural_attractions", natural_attractions))
+    application.add_handler(CommandHandler("close", close_keyboard))
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start', start)],
 
