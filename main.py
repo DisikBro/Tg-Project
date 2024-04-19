@@ -1,6 +1,5 @@
 import logging
 
-from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import Application, filters, CommandHandler, CallbackContext, MessageHandler, ConversationHandler
 from asyncs import *
 

@@ -53,15 +53,45 @@ async def observation_platforms(update, context):
 
 
 async def fountains(update, context):
-    await update.message.reply_text('fountains')
+    rubric_items = []
+    third_requests = (f'https://catalog.api.2gis.com/3.0/items?rubric_id='
+                      f'{attraction_ids[1]}&region_id={city_ids[0]}&key={apikey}')
+    third_response = requests.get(third_requests).json()
+    for i in range(len(third_response['result']['items'])):
+        for j in third_response['result']['items'][i]:
+            if j == 'building_name':
+                rubric_items.append(third_response['result']['items'][i][j])
+    await update.message.reply_text('Вот список фонтанов')
+    for i in rubric_items:
+        await update.message.reply_text(i)
 
 
 async def interesting_buildings(update, context):
-    await update.message.reply_text('interesting_buildings')
+    rubric_items = []
+    third_requests = (f'https://catalog.api.2gis.com/3.0/items?rubric_id='
+                      f'{attraction_ids[2]}&region_id={city_ids[0]}&key={apikey}')
+    third_response = requests.get(third_requests).json()
+    for i in range(len(third_response['result']['items'])):
+        for j in third_response['result']['items'][i]:
+            if j == 'building_name':
+                rubric_items.append(third_response['result']['items'][i][j])
+    await update.message.reply_text('Вот список интересных зданий')
+    for i in rubric_items:
+        await update.message.reply_text(i)
 
 
 async def natural_attractions(update, context):
-    await update.message.reply_text('natural_attractions')
+    rubric_items = []
+    third_requests = (f'https://catalog.api.2gis.com/3.0/items?rubric_id='
+                      f'{attraction_ids[3]}&region_id={city_ids[0]}&key={apikey}')
+    third_response = requests.get(third_requests).json()
+    for i in range(len(third_response['result']['items'])):
+        for j in third_response['result']['items'][i]:
+            if j == 'building_name':
+                rubric_items.append(third_response['result']['items'][i][j])
+    await update.message.reply_text('Вот список природных достопримечательностей')
+    for i in rubric_items:
+        await update.message.reply_text(i)
 
 
 async def stop(update, context):
