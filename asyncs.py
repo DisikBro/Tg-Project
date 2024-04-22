@@ -1,7 +1,8 @@
 import os
+import random
 
 import requests
-import telegram
+from yamager import Yamager
 from dotenv import load_dotenv
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import ConversationHandler
@@ -72,7 +73,8 @@ async def fountains(update, context):
             if j == 'building_name':
                 rubric_items.append(third_response['result']['items'][i][j])
     if rubric_items:
-        await update.message.reply_text('Вот список смотровых площадок:')
+        await update.message.reply_text('Вот список фонтанов:',
+                                        reply_markup=ReplyKeyboardRemove())
         for i in rubric_items:
             await update.message.reply_text(i)
         await update.message.reply_text('Пожалуйста выберите интересующую вас')
@@ -92,7 +94,8 @@ async def interesting_buildings(update, context):
             if j == 'building_name':
                 rubric_items.append(third_response['result']['items'][i][j])
     if rubric_items:
-        await update.message.reply_text('Вот список смотровых площадок:')
+        await update.message.reply_text('Вот список интересных зданий:',
+                                        reply_markup=ReplyKeyboardRemove())
         for i in rubric_items:
             await update.message.reply_text(i)
         await update.message.reply_text('Пожалуйста выберите интересующую вас')
@@ -112,7 +115,8 @@ async def natural_attractions(update, context):
             if j == 'building_name':
                 rubric_items.append(third_response['result']['items'][i][j])
     if rubric_items:
-        await update.message.reply_text('Вот список смотровых площадок:')
+        await update.message.reply_text('Вот список природных достопримечательностей:',
+                                        reply_markup=ReplyKeyboardRemove())
         for i in rubric_items:
             await update.message.reply_text(i)
         await update.message.reply_text('Пожалуйста выберите интересующую вас')
@@ -142,6 +146,29 @@ async def get_info(update, context):
     info.clear()
     rubric_items.clear()
     third_response1.clear()
+    attraction_ids.clear()
+    city_ids.clear()
+    yan = Yamager()
+    images = yan.search_google_images(str(building))
+    return random.choice(images)
+    # await update.message.reply_text('Выберем другой город?',
+    #                                 reply_markup=ReplyKeyboardMarkup([['/on_start']]))
+
+
+async def on_start(update, context):
+    await update.message.reply_text('Какой город вас интересует?', reply_markup=ReplyKeyboardRemove())
+
+    return 1
+
+
+# async def search_photo(query):
+#     try:
+#         yan = Yamager()
+#         images = yan.search_google_images(str(query))
+#         # prprprpr
+#         return random.choice(images)
+#     except Exception as e:
+#         return str(e)
 
 
 async def stop(update, context):

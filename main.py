@@ -26,6 +26,7 @@ def main():
         states={
             1: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_attractions)],
             2: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_info)],
+            3: [CommandHandler('on_start', on_start)]
 
         },
 
