@@ -25,10 +25,7 @@ def main():
 
         states={
             1: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_attractions)],
-            2: [CommandHandler('observation_platforms', observation_platforms)],
-            3: [CommandHandler('fountains', fountains)],
-            4: [CommandHandler('interesting_buildings', interesting_buildings)],
-            5: [CommandHandler('natural_attractions', natural_attractions)],
+            2: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_info)],
 
         },
 
