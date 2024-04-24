@@ -2,6 +2,7 @@ import logging
 
 from telegram.ext import Application, filters, CommandHandler, CallbackContext, MessageHandler, ConversationHandler
 from asyncs import *
+from data import db_session
 
 load_dotenv()
 BOT_TOKEN = os.getenv('TOKEN')
@@ -21,12 +22,13 @@ def main():
     application.add_handler(CommandHandler("natural_attractions", natural_attractions))
     application.add_handler(CommandHandler("close", close_keyboard))
     conv_handler = ConversationHandler(
-        entry_points=[CommandHandler('start', start)],
+        entry_points=[CommandHandler('start', start),
+                      CommandHandler('LES_GO', start_2)],
 
         states={
             1: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_attractions)],
             2: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_info)],
-            3: [CommandHandler('on_start', on_start)]
+            3: [CommandHandler('da', start_2)]
 
         },
 
@@ -34,6 +36,7 @@ def main():
     )
 
     application.add_handler(conv_handler)
+    db_session.global_init("db/attractions.db")
     application.run_polling()
 
 
