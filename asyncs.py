@@ -197,10 +197,10 @@ async def get_info(update, context):
     city_ids.clear()
     yan = Yamager()
     images = []
-    for i in range(3):
+    for i in range(2):
         image = yan.search_google_images(str(building))
         images.append(image)
-    for i in range(len(images)):
+    for i in range(len(images) + 1):
         await update.message.reply_photo(random.choice(images[i]))
     await update.message.reply_text('Выберем другой город? Выбора не дано!',
                                     reply_markup=ReplyKeyboardMarkup([['/da']]))
